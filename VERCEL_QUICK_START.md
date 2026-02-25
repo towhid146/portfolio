@@ -3,27 +3,32 @@
 ## 🚀 Deploy in 5 Steps
 
 ### 1️⃣ Sign Up
+
 ```
 https://vercel.com → "Sign Up with GitHub"
 ```
 
 ### 2️⃣ Import Project
+
 ```
 "Add New" → "Project" → Select "towhid146/portfolio"
 ```
 
 ### 3️⃣ Add Env Variables
+
 ```
 ADMIN_EMAIL = admin@towhidul.com
 ADMIN_PASSWORD = YourSecurePassword123!
 ```
 
 ### 4️⃣ Click Deploy
+
 ```
 Click "Deploy" button → Wait 2-5 minutes
 ```
 
 ### 5️⃣ Live!
+
 ```
 Visit: https://portfolio-xyz123.vercel.app
 Admin: https://portfolio-xyz123.vercel.app/admin
@@ -71,6 +76,7 @@ Admin Dashboard: https://portfolio-xyz123.vercel.app/admin/exams
 4. Redeploy (automatic)
 
 Example secure password:
+
 ```
 Portfolio@2026#Secure!
 ```
@@ -80,6 +86,7 @@ Portfolio@2026#Secure!
 ## 🔄 Auto-Redeploy
 
 Every time you:
+
 1. Push code to GitHub
 2. Vercel **automatically** redeploys
 3. Takes 1-2 minutes
@@ -89,13 +96,13 @@ Every time you:
 
 ## 🐛 Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| Build fails | Check build logs, verify env vars |
-| API 404 | Check `/src/app/api/` routes exist |
-| Login fails | Verify ADMIN_EMAIL & ADMIN_PASSWORD |
-| Data disappears | Normal - file storage is ephemeral |
-| Slow response | Check Functions dashboard |
+| Problem         | Solution                            |
+| --------------- | ----------------------------------- |
+| Build fails     | Check build logs, verify env vars   |
+| API 404         | Check `/src/app/api/` routes exist  |
+| Login fails     | Verify ADMIN_EMAIL & ADMIN_PASSWORD |
+| Data disappears | Normal - file storage is ephemeral  |
+| Slow response   | Check Functions dashboard           |
 
 ---
 
@@ -115,6 +122,7 @@ Analytics    → See page performance
 ## 🎯 Success Indicators
 
 ✅ App is deployed when you see:
+
 - Green checkmark on latest deployment
 - "Visit" button is clickable
 - Homepage loads without errors

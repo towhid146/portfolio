@@ -3,6 +3,7 @@
 ## Important: Single Full-Stack App
 
 This is a **single Next.js full-stack application**:
+
 - **Frontend**: React components in `/src/app`
 - **Backend**: API routes in `/src/app/api`
 - **Deploy once to Vercel** - both frontend and backend are deployed together
@@ -12,6 +13,7 @@ This is a **single Next.js full-stack application**:
 ## Step 1: Prerequisites ✅
 
 Before deploying, ensure:
+
 - [ ] Code committed to GitHub (already done ✓)
 - [ ] GitHub account
 - [ ] Vercel account (free signup at https://vercel.com)
@@ -51,11 +53,13 @@ Then select your `towhid146/portfolio` repository.
 After clicking import, you'll see the **Configure Project** page:
 
 ### Basic Settings (Auto-filled)
+
 - **Project Name**: `portfolio` (or change if desired)
 - **Framework Preset**: `Next.js` (auto-detected)
 - **Root Directory**: `./` (default)
 
 ### Build & Development Settings (Auto-detected)
+
 ```
 Build Command: npm run build
 Output Directory: .next
@@ -76,23 +80,27 @@ These are usually correct. **Leave as default.**
 ### Add These Variables:
 
 **Variable 1:**
+
 - **Name**: `ADMIN_EMAIL`
 - **Value**: `admin@towhidul.com`
 - **Select**: "Production, Preview, Development"
 - Click **"Add"**
 
 **Variable 2:**
+
 - **Name**: `ADMIN_PASSWORD`
 - **Value**: `YourSecurePassword123!` (Change from admin123)
 - **Select**: "Production, Preview, Development"
 - Click **"Add"**
 
 **Variable 3 (Optional - for future MongoDB):**
+
 - **Name**: `MONGODB_URI`
 - **Value**: (leave empty for now)
 - Skip this if not using MongoDB
 
 ### Final Environment Variables Section Should Look Like:
+
 ```
 ADMIN_EMAIL = admin@towhidul.com
 ADMIN_PASSWORD = YourSecurePassword123!
@@ -112,6 +120,7 @@ ADMIN_PASSWORD = YourSecurePassword123!
 ### Deployment Progress
 
 You'll see a live log:
+
 ```
 ✓ Analyzed 378 files
 ✓ Created 45 new Functions
@@ -142,16 +151,19 @@ Your app is now **LIVE on the internet!** 🎉
 ## Step 8: Test Your Deployment
 
 ### 1. Test Public Pages
+
 - Visit: `https://portfolio-xyz123.vercel.app/`
 - Visit: `https://portfolio-xyz123.vercel.app/exams`
 
 ### 2. Test Admin Login
+
 - Visit: `https://portfolio-xyz123.vercel.app/admin`
 - Login with:
   - **Email**: `admin@towhidul.com`
   - **Password**: `YourSecurePassword123!` (whatever you set)
 
 ### 3. Test Features
+
 - [ ] View exams list
 - [ ] View exam details
 - [ ] Create new exam
@@ -178,25 +190,33 @@ If you own a domain (e.g., `myportfolio.com`):
 ## Common Issues & Solutions
 
 ### Issue 1: "Build Failed"
+
 **Solution:**
+
 - Check build logs (Vercel shows them live)
 - Common cause: Missing environment variables
 - Ensure `ADMIN_EMAIL` and `ADMIN_PASSWORD` are set
 
 ### Issue 2: "Cannot POST /api/exams"
+
 **Solution:**
+
 - Verify environment variables are set correctly
 - Check API route exists in `/src/app/api/`
 - Refresh page and try again
 
 ### Issue 3: "File not found" in browser
+
 **Solution:**
+
 - This is expected for file-based storage (ephemeral)
 - Data is lost when Vercel restarts the server
 - Use MongoDB for persistent data (see below)
 
 ### Issue 4: Admin Login Not Working
+
 **Solution:**
+
 - Check exact email and password match environment variables
 - Password is case-sensitive
 - Clear browser cookies and try again
@@ -206,16 +226,19 @@ If you own a domain (e.g., `myportfolio.com`):
 ## Important: File Storage Limitation
 
 **Current Setup (File-based):**
+
 - ✅ Works fine on Vercel
 - ❌ Data lost when server restarts
 - ❌ Not suitable for production
 
 ### When Vercel Restarts (Your Data is Lost):
+
 - New deployment
 - Server error/crash
 - Daily resets (Vercel free tier restart)
 
 **For Production, Use MongoDB:**
+
 1. Create free MongoDB cluster at https://mongodb.com/cloud/atlas
 2. Get connection string
 3. Update code to use MongoDB instead of file system
@@ -227,6 +250,7 @@ If you own a domain (e.g., `myportfolio.com`):
 ## Monitoring & Debugging
 
 ### View Live Logs
+
 1. Vercel Dashboard → Your Project
 2. Click **"Deployments"** tab
 3. Click latest deployment
@@ -234,12 +258,14 @@ If you own a domain (e.g., `myportfolio.com`):
 5. Filter by "Edge Network", "Function", or "Build"
 
 ### Check Function Runtime
+
 1. **"Functions"** tab
 2. See all API routes and their performance
 3. `/api/exams` - GET all exams function
 4. `/api/exams/[slug]` - Dynamic exam routes
 
 ### Check Build Size
+
 1. **"Deployments"** tab
 2. Latest deployment details
 3. See which files are largest
@@ -251,6 +277,7 @@ If you own a domain (e.g., `myportfolio.com`):
 Whenever you make code changes:
 
 1. Commit to GitHub:
+
    ```bash
    git add .
    git commit -m "Update feature"
@@ -308,9 +335,9 @@ After deployment:
 ## Video Alternative
 
 If you prefer video guide:
+
 1. Search "Vercel Deploy Next.js" on YouTube
 2. Follow along step-by-step
 3. Should take ~5 minutes
 
 ---
-
