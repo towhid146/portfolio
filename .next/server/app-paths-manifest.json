@@ -1,0 +1,13 @@
+{
+  "/exams/[slug]/page": "app/exams/[slug]/page.js",
+  "/exams/page": "app/exams/page.js",
+  "/api/exams/route": "app/api/exams/route.js",
+  "/api/exams/[slug]/submit/route": "app/api/exams/[slug]/submit/route.js",
+  "/api/exams/[slug]/route": "app/api/exams/[slug]/route.js",
+  "/api/auth/check/route": "app/api/auth/check/route.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/exams/page": "app/admin/exams/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/exams/new/page": "app/admin/exams/new/page.js",
+  "/admin/exams/[slug]/edit/page": "app/admin/exams/[slug]/edit/page.js"
+}
